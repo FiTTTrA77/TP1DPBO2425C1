@@ -104,10 +104,18 @@ void cariData(){
     daftar[index].tampil();
 }
 
+string formatRupiah(double value) {
+    string s = to_string((long long)value);
+    int n = s.length();
+    for (int i = n - 3; i > 0; i -= 3)
+        s.insert(i, ".");
+    return s;
+}
+
 int main(){
     int pilihan;
     do{
-        cout << "\n=== Menu Toko Elektronik ===\n";
+        cout << "\nMenu Toko Elektronik\n";
         cout << "1. Tambah Data\n";
         cout << "2. Tampilkan Data\n";
         cout << "3. Update Data\n";
