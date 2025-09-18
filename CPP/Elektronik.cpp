@@ -8,14 +8,16 @@ private:
     int id;
     string nama;
     string merek;
-    double harga;
+    string harga;
+
+ 
 
 public:
     //konstruktor 
-    Elektronik() : id(0), nama(""), merek(""), harga(0.0) {}
+    Elektronik() : id(0), nama(""), merek(""), harga("") {}
 
     //konstruktor dengan parameter
-    Elektronik(int i, string n, string m, double h)
+    Elektronik(int i, string n, string m, string h)
         : id(i), nama(n), merek(m), harga(h) {}
 
     //getter
@@ -28,7 +30,7 @@ public:
     string getMerek() const{ 
         return merek; 
     }
-    double getHarga() const{ 
+    string getHarga() const{ 
         return harga; 
     }
 
@@ -42,9 +44,11 @@ public:
     void setMerek(string m){ 
         merek = m; 
     }
-    void setHarga(double h){ 
+    void setHarga(string h){ 
         harga = h; 
     }
+
+
 
     //method tampil
     void tampil() const {
