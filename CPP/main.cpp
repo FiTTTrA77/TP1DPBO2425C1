@@ -104,6 +104,7 @@ void cariData(){
     daftar[index].tampil();
 }
 
+//untuk menunjukkan hasil harga rupiah
 string formatRupiah(double value) {
     string s = to_string((long long)value);
     int n = s.length();
