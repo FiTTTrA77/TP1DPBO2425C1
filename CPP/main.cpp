@@ -17,7 +17,7 @@ int cariIndexById(int id) {
 
 //menambahkan data barang baru
 void tambahData(){
-    int id; string nama, merek; double harga;
+    int id; string nama, merek, harga;
 
     cout << "Masukkan ID: "; cin >> id;
 
@@ -65,7 +65,7 @@ void updateData(){
         return;
     }
 
-    string nama, merek; double harga;
+    string nama, merek, harga;
     cout << "Masukkan Nama baru: "; cin >> nama;
     cout << "Masukkan Merek baru: "; cin >> merek;
     cout << "Masukkan Harga baru: "; cin >> harga;
@@ -104,14 +104,7 @@ void cariData(){
     daftar[index].tampil();
 }
 
-//untuk menunjukkan hasil harga rupiah
-string formatRupiah(double value) {
-    string s = to_string((long long)value);
-    int n = s.length();
-    for (int i = n - 3; i > 0; i -= 3)
-        s.insert(i, ".");
-    return s;
-}
+
 
 int main(){
     int pilihan;
